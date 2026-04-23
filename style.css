@@ -112,4 +112,59 @@ body {
     transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.3);
 }
+/* =========================
+   7. STATUS SECTION
+========================= */
+.status-section {
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.status-section p {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.95rem;
+}
+
+/* =========================
+   8. MAIN WEATHER CARD
+========================= */
+.weather-card {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-location h2 {
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+.weather-location p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+}
+
+.weather-icon span {
+    font-size: 3rem;
+}
+
+.weather-temp h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.weather-temp p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
 
