@@ -168,3 +168,63 @@ body {
     margin-bottom: 6px;
 }
 
+/* =========================
+   9. DETAILS GRID
+========================= */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.detail-card {
+    padding: 22px;
+    text-align: center;
+}
+
+.detail-card h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 500;
+}
+
+.detail-card p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* =========================
+   10. RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+    body {
+        padding: 18px;
+    }
+
+    .header h1 {
+        font-size: 2.4rem;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section button {
+        width: 100%;
+    }
+
+    .weather-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .weather-temp h3 {
+        font-size: 2.6rem;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
