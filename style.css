@@ -48,3 +48,68 @@ body {
     border-radius: 22px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
+
+/* =========================
+   5. HEADER
+========================= */
+.header {
+    text-align: center;
+    padding: 28px 24px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1rem;
+}
+
+/* =========================
+   6. SEARCH SECTION
+========================= */
+.search-section {
+    display: flex;
+    gap: 12px;
+    padding: 18px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 14px 18px;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    font-size: 1rem;
+
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+}
+
+.search-section input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-section button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.22);
+    color: white;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.search-section button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
