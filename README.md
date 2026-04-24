@@ -21,7 +21,7 @@ Nimbus is a modern glassmorphism weather app built with HTML, CSS, and JavaScrip
 
 ## Live Demo
 
-Add your GitHub Pages link here.
+https://arhamsuhail-darkcipher.github.io/Nimbus/
 
 ## What I Learned
 
