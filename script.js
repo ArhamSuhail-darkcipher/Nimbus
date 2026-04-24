@@ -7,10 +7,10 @@ const searchBtn = document.getElementById("search-btn");
 const statusMessage = document.getElementById("status-message");
 const statusSection = document.querySelector(".status-section");
 
+const spinner = document.getElementById("spinner");
+
 const weatherCard = document.getElementById("weather-card");
 const detailsGrid = document.getElementById("details-grid");
-
-const spinner = document.getElementById("spinner");
 
 const cityName = document.getElementById("city-name");
 const countryName = document.getElementById("country-name");
