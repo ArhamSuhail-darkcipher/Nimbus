@@ -50,7 +50,14 @@ body {
 }
 
 /* =========================
-   5. HEADER
+   5. HIDDEN STATE
+========================= */
+.hidden {
+    display: none;
+}
+
+/* =========================
+   6. HEADER
 ========================= */
 .header {
     text-align: center;
@@ -70,7 +77,7 @@ body {
 }
 
 /* =========================
-   6. SEARCH SECTION
+   7. SEARCH SECTION
 ========================= */
 .search-section {
     display: flex;
@@ -114,11 +121,12 @@ body {
 }
 
 /* =========================
-   7. STATUS SECTION
+   8. STATUS SECTION
 ========================= */
 .status-section {
     padding: 16px 20px;
     text-align: center;
+    transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 .status-section p {
@@ -126,13 +134,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* =========================
-   STATUS STATES
-========================= */
-.status-section {
-    transition: border-color 0.25s ease, background 0.25s ease;
-}
-
+/* Status visual states */
 .status-section.info {
     background: rgba(255, 255, 255, 0.12);
 }
@@ -153,7 +155,7 @@ body {
 }
 
 /* =========================
-   8. MAIN WEATHER CARD
+   9. MAIN WEATHER CARD
 ========================= */
 .weather-card {
     padding: 28px;
@@ -196,7 +198,7 @@ body {
 }
 
 /* =========================
-   9. DETAILS GRID
+   10. DETAILS GRID
 ========================= */
 .details-grid {
     display: grid;
@@ -221,20 +223,13 @@ body {
     font-weight: 700;
 }
 
-
 /* =========================
-   HIDDEN STATE
-========================= */
-.hidden {
-    display: none;
-}
-
-/* =========================
-   10. RESPONSIVE
+   11. RESPONSIVE DESIGN
 ========================= */
 @media (max-width: 700px) {
     body {
         padding: 18px;
+        align-items: flex-start;
     }
 
     .header h1 {
