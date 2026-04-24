@@ -68,6 +68,8 @@ async function getWeather(city) {
 
         updateUI(data);
         showStatus("Weather updated successfully.", "success");
+        // Clear input after success
+        cityInput.value = "";
 
     } catch (error) {
         showStatus(error.message, "error");
