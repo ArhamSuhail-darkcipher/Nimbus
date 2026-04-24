@@ -72,3 +72,25 @@ async function getWeather(city) {
         showStatus(error.message, "error");
     }
 }
+
+// =========================
+// 5. UPDATE UI
+// =========================
+function updateUI(data) {
+    weatherCard.classList.remove("hidden");
+    detailsGrid.classList.remove("hidden");
+
+    cityName.textContent = data.name;
+    countryName.textContent = data.sys.country;
+
+    temperature.textContent = `${Math.round(data.main.temp)}°C`;
+    condition.textContent = capitalizeWords(data.weather[0].description);
+    feelsLike.textContent = `Feels like ${Math.round(data.main.feels_like)}°C`;
+
+    humidity.textContent = `${data.main.humidity}%`;
+    windSpeed.textContent = `${data.wind.speed} m/s`;
+    pressure.textContent = `${data.main.pressure} hPa`;
+    visibility.textContent = `${(data.visibility / 1000).toFixed(1)} km`;
+
+    weatherIcon.textContent = getWeatherEmoji(data.weather[0].main);
+}
