@@ -11,9 +11,6 @@
 </head>
 <body>
 
-<!-- =========================
-     APP WRAPPER
-========================== -->
 <main class="app">
 
     <!-- =========================
@@ -27,18 +24,18 @@
     <!-- =========================
          SEARCH SECTION
     ========================== -->
-    <section class="status-section info">
+    <section class="search-section">
         <input
-                type="text"
-                id="city-input"
-                placeholder="Enter city name..."
+            type="text"
+            id="city-input"
+            placeholder="Enter city name..."
         />
         <button id="search-btn" type="button">Search</button>
     </section>
 
     <!-- =========================
          STATUS SECTION
-         Used later for loading / errors
+         Used for info / loading / success / error
     ========================== -->
     <section class="status-section info">
         <p id="status-message">Search for a city to view the weather.</p>
@@ -46,12 +43,13 @@
 
     <!-- =========================
          MAIN WEATHER CARD
+         Hidden until successful search
     ========================== -->
-    <section class="weather-card hidden" id = "weather-card">
+    <section class="weather-card hidden" id="weather-card">
         <div class="weather-main">
             <div class="weather-location">
-                <h2 id="city-name">Islamabad</h2>
-                <p id="country-name">Pakistan</p>
+                <h2 id="city-name">City</h2>
+                <p id="country-name">Country</p>
             </div>
 
             <div class="weather-icon">
@@ -60,40 +58,40 @@
         </div>
 
         <div class="weather-temp">
-            <h3 id="temperature">24°C</h3>
-            <p id="condition">Cloudy</p>
-            <p id="feels-like">Feels like 26°C</p>
+            <h3 id="temperature">--°C</h3>
+            <p id="condition">Condition</p>
+            <p id="feels-like">Feels like --°C</p>
         </div>
     </section>
 
     <!-- =========================
          DETAILS GRID
+         Hidden until successful search
     ========================== -->
     <section class="details-grid hidden" id="details-grid">
         <article class="detail-card">
             <h4>Humidity</h4>
-            <p id="humidity">68%</p>
+            <p id="humidity">--%</p>
         </article>
 
         <article class="detail-card">
             <h4>Wind Speed</h4>
-            <p id="wind-speed">12 km/h</p>
+            <p id="wind-speed">-- m/s</p>
         </article>
 
         <article class="detail-card">
             <h4>Pressure</h4>
-            <p id="pressure">1012 hPa</p>
+            <p id="pressure">-- hPa</p>
         </article>
 
         <article class="detail-card">
             <h4>Visibility</h4>
-            <p id="visibility">8 km</p>
+            <p id="visibility">-- km</p>
         </article>
     </section>
 
 </main>
 
-<!-- Script will be added later -->
 <script src="script.js"></script>
 </body>
 </html>
