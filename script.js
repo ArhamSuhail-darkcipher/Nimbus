@@ -25,6 +25,7 @@ const visibility = document.getElementById("visibility");
 
 // =========================
 // 2. API CONFIG
+// Replace YOUR_API_KEY with your OpenWeatherMap key
 // =========================
 const API_KEY = "5e12557c3709b1ab0e1ea7c96704e378";
 
