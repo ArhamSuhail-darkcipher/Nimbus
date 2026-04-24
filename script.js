@@ -1,8 +1,27 @@
 // =========================
-// 1. ELEMENTS
+// 1. DOM ELEMENTS
 // =========================
-const input = document.getElementById("city-input");
-const button = document.getElementById("search-btn");
+const cityInput = document.getElementById("city-input");
+const searchBtn = document.getElementById("search-btn");
+
+const statusMessage = document.getElementById("status-message");
+const statusSection = document.querySelector(".status-section");
+
+const weatherCard = document.getElementById("weather-card");
+const detailsGrid = document.getElementById("details-grid");
+
+const cityName = document.getElementById("city-name");
+const countryName = document.getElementById("country-name");
+const weatherIcon = document.querySelector(".weather-icon span");
+
+const temperature = document.getElementById("temperature");
+const condition = document.getElementById("condition");
+const feelsLike = document.getElementById("feels-like");
+
+const humidity = document.getElementById("humidity");
+const windSpeed = document.getElementById("wind-speed");
+const pressure = document.getElementById("pressure");
+const visibility = document.getElementById("visibility");
 
 // =========================
 // 2. EVENT LISTENER
