@@ -24,36 +24,51 @@ const pressure = document.getElementById("pressure");
 const visibility = document.getElementById("visibility");
 
 // =========================
-// 2. EVENT LISTENER
+// 2. API CONFIG
 // =========================
-button.addEventListener("click", () => {
-    const city = input.value.trim();
+const API_KEY = "5e12557c3709b1ab0e1ea7c96704e378";
 
-    if (!city) return;
+// =========================
+// 3. EVENT LISTENERS
+// =========================
+searchBtn.addEventListener("click", () => {
+    const city = cityInput.value.trim();
+
+    if (city === "") {
+        showStatus("Please enter a city name.", "error");
+        return;
+    }
 
     getWeather(city);
 });
 
+cityInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchBtn.click();
+    }
+});
+
 // =========================
-// 3. FETCH FUNCTION
+// 4. FETCH WEATHER DATA
 // =========================
 async function getWeather(city) {
-    const API_KEY = "5e12557c3709b1ab0e1ea7c96704e378";
-
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
     try {
+        showStatus("Loading weather data...", "loading");
+
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error("City not found");
+            throw new Error("City not found. Please try again.");
         }
 
         const data = await response.json();
 
-        console.log(data); // 🔥 IMPORTANT STEP
+        updateUI(data);
+        showStatus("Weather updated successfully.", "success");
 
     } catch (error) {
-        console.error(error);
+        showStatus(error.message, "error");
     }
 }
