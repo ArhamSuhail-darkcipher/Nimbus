@@ -11,88 +11,89 @@
 </head>
 <body>
 
+<!-- =========================
+     APP WRAPPER
+========================== -->
+<main class="app">
+
     <!-- =========================
-         APP WRAPPER
+         HEADER
     ========================== -->
-    <main class="app">
+    <header class="header">
+        <h1>Nimbus</h1>
+        <p>Real-time weather insights with a modern glass UI</p>
+    </header>
 
-        <!-- =========================
-             HEADER
-        ========================== -->
-        <header class="header">
-            <h1>Nimbus</h1>
-            <p>Real-time weather insights with a modern glass UI</p>
-        </header>
-
-        <!-- =========================
-             SEARCH SECTION
-        ========================== -->
-        <section class="search-section">
-            <input
+    <!-- =========================
+         SEARCH SECTION
+    ========================== -->
+    <section class="status-section info">
+        <input
                 type="text"
                 id="city-input"
                 placeholder="Enter city name..."
-            />
-            <button id="search-btn" type="button">Search</button>
-        </section>
-         <!-- =========================
-             STATUS SECTION
-             Used later for loading / errors
-        ========================== -->
-        <section class="status-section">
-            <p id="status-message">Search for a city to view the weather.</p>
-        </section>
+        />
+        <button id="search-btn" type="button">Search</button>
+    </section>
 
-        <!-- =========================
-             MAIN WEATHER CARD
-        ========================== -->
-        <section class="weather-card">
-            <div class="weather-main">
-                <div class="weather-location">
-                    <h2 id="city-name">Islamabad</h2>
-                    <p id="country-name">Pakistan</p>
-                </div>
+    <!-- =========================
+         STATUS SECTION
+         Used later for loading / errors
+    ========================== -->
+    <section class="status-section info">
+        <p id="status-message">Search for a city to view the weather.</p>
+    </section>
 
-                <div class="weather-icon">
-                    <span>☁️</span>
-                </div>
+    <!-- =========================
+         MAIN WEATHER CARD
+    ========================== -->
+    <section class="weather-card hidden" id = "weather-card">
+        <div class="weather-main">
+            <div class="weather-location">
+                <h2 id="city-name">Islamabad</h2>
+                <p id="country-name">Pakistan</p>
             </div>
 
-            <div class="weather-temp">
-                <h3 id="temperature">24°C</h3>
-                <p id="condition">Cloudy</p>
-                <p id="feels-like">Feels like 26°C</p>
+            <div class="weather-icon">
+                <span>☁️</span>
             </div>
-        </section>
+        </div>
 
-        <!-- =========================
-             DETAILS GRID
-        ========================== -->
-        <section class="details-grid">
-            <article class="detail-card">
-                <h4>Humidity</h4>
-                <p id="humidity">68%</p>
-            </article>
+        <div class="weather-temp">
+            <h3 id="temperature">24°C</h3>
+            <p id="condition">Cloudy</p>
+            <p id="feels-like">Feels like 26°C</p>
+        </div>
+    </section>
 
-            <article class="detail-card">
-                <h4>Wind Speed</h4>
-                <p id="wind-speed">12 km/h</p>
-            </article>
+    <!-- =========================
+         DETAILS GRID
+    ========================== -->
+    <section class="details-grid hidden" id="details-grid">
+        <article class="detail-card">
+            <h4>Humidity</h4>
+            <p id="humidity">68%</p>
+        </article>
 
-            <article class="detail-card">
-                <h4>Pressure</h4>
-                <p id="pressure">1012 hPa</p>
-            </article>
+        <article class="detail-card">
+            <h4>Wind Speed</h4>
+            <p id="wind-speed">12 km/h</p>
+        </article>
 
-            <article class="detail-card">
-                <h4>Visibility</h4>
-                <p id="visibility">8 km</p>
-            </article>
-        </section>
+        <article class="detail-card">
+            <h4>Pressure</h4>
+            <p id="pressure">1012 hPa</p>
+        </article>
 
-    </main>
+        <article class="detail-card">
+            <h4>Visibility</h4>
+            <p id="visibility">8 km</p>
+        </article>
+    </section>
 
-    <!-- Script will be added later -->
-    <script src="script.js"></script>
+</main>
+
+<!-- Script will be added later -->
+<script src="script.js"></script>
 </body>
 </html>
