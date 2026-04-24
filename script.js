@@ -94,3 +94,46 @@ function updateUI(data) {
 
     weatherIcon.textContent = getWeatherEmoji(data.weather[0].main);
 }
+
+// =========================
+// 6. STATUS HANDLING
+// =========================
+function showStatus(message, type = "info") {
+    statusMessage.textContent = message;
+
+    statusSection.classList.remove("info", "loading", "success", "error");
+    statusSection.classList.add(type);
+}
+
+// =========================
+// 7. HELPER FUNCTIONS
+// =========================
+function capitalizeWords(text) {
+    return text
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+}
+
+function getWeatherEmoji(weatherType) {
+    switch (weatherType) {
+        case "Clear":
+            return "☀️";
+        case "Clouds":
+            return "☁️";
+        case "Rain":
+            return "🌧️";
+        case "Drizzle":
+            return "🌦️";
+        case "Thunderstorm":
+            return "⛈️";
+        case "Snow":
+            return "❄️";
+        case "Mist":
+        case "Fog":
+        case "Haze":
+            return "🌫️";
+        default:
+            return "🌤️";
+    }
+}
