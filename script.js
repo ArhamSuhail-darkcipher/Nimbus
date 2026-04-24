@@ -10,6 +10,8 @@ const statusSection = document.querySelector(".status-section");
 const weatherCard = document.getElementById("weather-card");
 const detailsGrid = document.getElementById("details-grid");
 
+const spinner = document.getElementById("spinner");
+
 const cityName = document.getElementById("city-name");
 const countryName = document.getElementById("country-name");
 const weatherIcon = document.querySelector(".weather-icon span");
@@ -106,6 +108,13 @@ function showStatus(message, type = "info") {
 
     statusSection.classList.remove("info", "loading", "success", "error");
     statusSection.classList.add(type);
+
+    // Spinner logic
+    if (type === "loading") {
+        spinner.classList.remove("hidden");
+    } else {
+        spinner.classList.add("hidden");
+    }
 }
 
 // =========================
